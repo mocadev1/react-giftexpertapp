@@ -11,3 +11,13 @@ const GifGridItem = ( { title, url} ) => {
 }
 
 export default GifGridItem
+
+
+/**
+ * 1. Configurar Enzyme
+ * 2. Configurar Enzyme to Json
+ * 3. Debe de Mostrar el componente correctamente
+ *      * utilizar el shallow
+ *      * retorna "algo" que llamaremos wrapper. // "algo" es el componente renderizado por enzyme
+ *      * wrapper .toMatchSnapshot() // haremos la prueba para que coincida con el snapshot
+ */
