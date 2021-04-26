@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const GifGridItem = ( { title, url} ) => {
 
@@ -12,12 +13,16 @@ const GifGridItem = ( { title, url} ) => {
 
 export default GifGridItem
 
+GifGridItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+}
+
 
 /**
- * 1. Configurar Enzyme
- * 2. Configurar Enzyme to Json
- * 3. Debe de Mostrar el componente correctamente
- *      * utilizar el shallow
- *      * retorna "algo" que llamaremos wrapper. // "algo" es el componente renderizado por enzyme
- *      * wrapper .toMatchSnapshot() // haremos la prueba para que coincida con el snapshot
+ * Implementando Proptypes y actualizar snapshots
+ * 
+ * 1. Añadir PropTypes url, title -> Obligatorios
+ * 2. Enviar url y title a la hora de utilizar shallow()
+ * 3. Actualizar snapshot con los cambios 
  */
