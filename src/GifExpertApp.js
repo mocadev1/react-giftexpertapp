@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
+
 import AddCategory from './components/AddCategory';
 import GifGrid from './components/GifGrid';
 
-const GifExpertApp = () => {
+const GifExpertApp = ( { defaultCategories = [] } ) => {
 
     // const categories = ['One Punch', 'Shippuden', 'Darling in the Franxx'];
-    const [categories, setCategories] = useState(['Darling in the Franxx']);
+    // const [categories, setCategories] = useState(['Darling in the Franxx']);
+    const [categories, setCategories] = useState( defaultCategories );
 
     // const handleAdd = ( ) => setCategories( [...categories, 'category'] ); // Mi solución a la tarea
     /** 
@@ -33,5 +36,9 @@ const GifExpertApp = () => {
         </>
     );
 }
+
+GifExpertApp.propTypes = {
+    defaultCategories: PropTypes.array
+};
 
 export default GifExpertApp
